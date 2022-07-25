@@ -26,3 +26,23 @@
  * ---> Recuerda. Debe contener las dos letras 'a' y 'n' en el nombre. No cuentes ovejas que sólo tenga una de las letras, debe tener ambas.
  */
 
+const ovejas = [
+  { name: 'Noa', color: 'azul' },
+  { name: 'Euge', color: 'rojo' },
+  { name: 'Navidad', color: 'rojo' },
+  { name: 'Ki Na Ma', color: 'rojo' },
+  { name: 'AAAAAaaaaa', color: 'rojo' },
+  { name: 'Nnnnnnnn', color: 'rojo' }
+]
+
+const ovejasFiltradas = ovejas.filter((oveja) => oveja.color === 'rojo' && /(n)+(a)+/i.test(oveja.name));
+
+console.log(ovejasFiltradas)
+
+
+/** solucion para la web
+ * 
+ export default function contarOvejas(ovejas) {
+  return ovejas.filter((oveja) => oveja.color === 'rojo' && /(n)+(a)+/i.test(oveja.name))
+ }
+ */
